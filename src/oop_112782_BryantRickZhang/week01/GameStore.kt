@@ -1,8 +1,8 @@
-package oop_001_johnthor.week01
+package oop_001_BryantRickZhang.week01
 
 fun main() {
     val gameTitle: String = "SteamKW Game"
-    val price: Int = 600000
+    val price: Int = 500000
 }
 
 fun calculateDiscount(price: Int): Int =
