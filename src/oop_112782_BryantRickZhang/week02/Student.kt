@@ -1,11 +1,12 @@
 package oop_112782_BryantRickZhang.week02
 
-class student(
+class Student(
     val name: String,
     val nim: String,
-    var gpa: Double = 0.0,
     val major: String,
+    var gpa: Double = 0.0
 ) {
+
     init {
         //Validasi Sederhana : Cek panjang NIM
         if(nim.length !=5 ) {
@@ -16,9 +17,11 @@ class student(
         }
     }
 
-        constructor(name: String, nim: String) : this(name, nim, major="Non-Matriculated"){
-            println("LOG: Menggunakan constructor jalur umum (Tanpa Jurusan.")
-        }
+    constructor(name: String, nim: String)
+            : this(name, nim, "Non-Matriculated", 0.0) {
+        println("LOG: Menggunakan constructor jalur umum (Tanpa Jurusan).")
+    }
+
 
 }
 

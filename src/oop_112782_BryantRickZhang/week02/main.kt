@@ -1,27 +1,46 @@
-package oop_112782_BryantRickZhang.week02
+    package oop_112782_BryantRickZhang.week02
 
-import java.util.Scanner
+    import java.util.Scanner
 
-fun main (){
-    val scanner = Scanner(System.`in`)
+    fun main (){
+        val scanner = Scanner(System.`in`)
 
-    println("--- Aplikasi PMB UMN ---")
+        println("--- Aplikasi PMB UMN ---")
 
-    print("Masukkan Nama: ")
-    val name = scanner.nextLine()
+        print("Masukkan Nama: ")
+        val name = scanner.nextLine()
 
-    print("Masukkan NIM (Wajib 5 Karakter): ")
-    val nim = scanner.next()
+        print("Masukkan NIM (Wajib 5 Karakter): ")
+        val nim = scanner.next()
 
-    scanner.nextLine()
+        scanner.nextLine()
 
-    if(nim.length != 5){
-        println("Error: Pendaftaran dibatalkan. Nim harus 5 karakter!")
-    } else {
-        print("Masukkan Jurusan: ")
-        val major = scanner.nextLine()
+        if(nim.length != 5){
+            println("Error: Pendaftaran dibatalkan. Nim harus 5 karakter!")
+        } else {
+            print("Masukkan Jurusan: ")
+            val major = scanner.nextLine()
 
-        val s1 = student(name , nim, major)
-        println("Status: Pendaftaran Selesai")
+            val s1 = student(nim, name, major)
+            println("Status: Pendaftaran Selesai")
+        }
+
+        print("Pilih Jalur (1. Reguler, 2. Umum ): ")
+        val type = scanner.nextInt()
+        scanner.nextLine()
+
+        if (type == 1) {
+            print("Masukkan Jurusan: ")
+            val major = scanner.nextLine()
+            // Memanggil Primary Constructor
+            val s1 = student(name, nim, major)
+            println("Terdaftar di: ${s1.major} dengan GPA awal ${s1.gpa}")
+        } else if (type == 2) {
+            // Memanggil Secondary Constructor, jurusan otomatis "Non-Matriculated"
+            val s2 = student(name, nim)
+            println("Terdaftar di: ${s2.major} dengan GPA awal ${s2.gpa}")
+        } else {
+            println("Pilihan ngawur, pendaftaran batal!")
+        }
+        }
     }
-}
