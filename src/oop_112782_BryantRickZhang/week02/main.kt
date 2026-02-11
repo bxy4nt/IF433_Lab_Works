@@ -42,4 +42,5 @@
         } else {
             println("Pilihan ngawur, pendaftaran batal!")
         }
-        }
+
+    }
