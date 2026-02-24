@@ -12,3 +12,13 @@ class Employee(
             }
         }
 }
+
+    private var performance: Int = 0
+
+fun updateRating(newrating: Int){
+    if(newrating in 1..5){
+        performance = newrating
+    } else {
+        println("Rating harus antara 1 sampai 5")
+    }
+}
