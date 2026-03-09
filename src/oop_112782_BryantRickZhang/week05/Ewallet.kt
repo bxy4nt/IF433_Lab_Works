@@ -1,6 +1,6 @@
 package oop_112782_BryantRickZhang.week05
 
-class Ewallet (
+class EWallet (
     accountName: String,
     var balance: Double
 ) : PaymentMethod(accountName) {
