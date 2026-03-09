@@ -13,7 +13,7 @@ fun Main() {
 
         when (Pegawai) {
             is Dosen -> Pegawai.mengajar()
-            is Admin -> Pegawai.mengarsipkan()
+            is Admin -> Pegawai.doAdminWork()
         }
 
         println()
