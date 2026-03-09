@@ -8,7 +8,7 @@ class Admin(
         println("$nama sedang mengelola administrasi Kampus.")
     }
 
-    fun mengarsipkan (){
+    fun doAdminWork (){
         println("$nama sedang mengarsipkan dokumen.")
     }
 }
