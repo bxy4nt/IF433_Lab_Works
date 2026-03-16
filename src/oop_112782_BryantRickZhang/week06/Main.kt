@@ -11,4 +11,18 @@ fun main(){
 
     processCheckout(Gopay, 50000.0)
     processCheckout(CreditCard, 120000.0)
+
+    val lamp = SmartLamp("01", "Lampu Ruang Tamu")
+    val speaker = SmartSpeaker("02", "Google Nest Dapur")
+    val cctv = smartCCTV("03", "Ezviz Garasi")
+
+    val hub = SmartHomeHub()
+
+    hub.addDevice(lamp)
+    hub.addDevice(speaker)
+    hub.addDevice(cctv)
+
+    hub.activateSecurityMode()
+
+    hub.turnOffAllSwitches()
 }
