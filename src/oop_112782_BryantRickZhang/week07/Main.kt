@@ -8,4 +8,10 @@ fun main(){
     println("\n==== TEST COMPANION OBJECT ===")
     val client = NetworkClient.createClient()
     client.connect()
+
+    val u1 = UserData("Budi", 20)
+    val u2 = UserData("Budi", 20)
+
+    println(u1)
+    println(u1 == u2) // true
 }
