@@ -19,4 +19,10 @@ fun main(){
 
     println(name)
     println(age)
+
+    val response: ApiResponse = ApiResponse.Success("OK")
+    val msg = when (response) {
+        is ApiResponse.Success -> response.data
+        is ApiResponse.Error -> response.message
+    }
 }
