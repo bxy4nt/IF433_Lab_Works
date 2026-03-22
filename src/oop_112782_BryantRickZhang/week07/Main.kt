@@ -11,7 +11,6 @@ fun main(){
 
     val u1 = UserData("Budi", 20)
     val u2 = UserData("Budi", 20)
-
-    println(u1)
-    println(u1 == u2) // true
+    val u3 = u1.copy(age = 25)
+    val (name, age) = u3
 }
