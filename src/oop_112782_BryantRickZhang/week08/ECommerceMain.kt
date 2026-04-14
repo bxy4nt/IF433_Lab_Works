@@ -1,5 +1,6 @@
 package oop_112782_BryantRickZhang.week08
 
+//mainkt untuk ECommerce
 fun main() {
     val rawApiData : List<Map<String, Any?>> = listOf(
         mapOf("id" to "E01", "name" to "Laptop", "type" to "ELECTRONIC", "warranty" to 24),
