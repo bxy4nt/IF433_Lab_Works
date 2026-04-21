@@ -32,7 +32,7 @@ fun main () {
         .map { it.pair }
         .toSet()
 
-    println("=== CRYPTO TRADING DASHBOARD ===")
+    println("=== CRYPTO TRADING DASHBOARD ===") //cetak
     topPerformersString.forEach { println(it) }
 
     worstPerformersString.forEach { println(it) }
