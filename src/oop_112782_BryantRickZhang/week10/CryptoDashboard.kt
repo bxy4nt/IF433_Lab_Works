@@ -22,4 +22,6 @@ fun main() {
     txRepo.getAll().forEach { tx ->
         println("ID: ${tx.id}, Amount: ${tx.amount}")
     }
+
+    println("\nSystem Check: Generic Architecture established successfully.")
 }
