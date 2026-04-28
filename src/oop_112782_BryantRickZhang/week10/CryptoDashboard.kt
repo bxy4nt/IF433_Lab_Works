@@ -7,4 +7,10 @@ fun main() {
     coinRepo.add(Coin("USDT", 1000.0))
 
     val response = ApiResponse("200 OK", coinRepo.getAll())
+
+    println("=== CRYPTO DASHBOARD ===")
+    println("Response Status: ${response.status}")
+    response.data.forEach { coin ->
+        println("Coin Name: ${coin.name}, Balance: ${coin.balance}")
+    }
 }
