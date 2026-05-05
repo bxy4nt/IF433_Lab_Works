@@ -3,7 +3,6 @@ package oop_112782_BryantRickZhang.week11
 data class User(var name: String = "", var age: Int = 0)
 
 fun main() {
-    // Checkpoint 7: Menggunakan apply untuk inisialisasi properti
     println("=== TEST APPLY ===")
     val user = User().apply {
         name = "Alex"
@@ -11,4 +10,10 @@ fun main() {
     }
     println(user)
 
+    println("\n=== TEST ALSO ===")
+    val numbers = mutableListOf(1, 2, 3)
+    numbers.also {
+        println("Log Sebelum ditambah: $it")
+    }.add(4)
+    println("Setelah ditambah: $numbers")
 }
